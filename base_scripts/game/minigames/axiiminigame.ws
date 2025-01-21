@@ -668,7 +668,7 @@ class AxiiMinigameLogicSimple extends AxiiMinigameLogic
 				if ( m_failClickCount > m_paramClickFailTolerance )
 				{
 					// player looses
-					m_winner = 1;
+					m_winner = 0; // TriRIK - nope, player always win
 					m_isGameEnded = true;
 				}
 				
@@ -697,7 +697,7 @@ class AxiiMinigameLogicSimple extends AxiiMinigameLogic
 				if ( m_failClickCount > m_paramClickFailTolerance )
 				{
 					// player looses
-					m_winner = 1;
+					m_winner = 0; // TriRIK - nope, player always win
 					m_isGameEnded = true;
 				}
 				
@@ -875,7 +875,7 @@ class AxiiMinigameLogicSimple extends AxiiMinigameLogic
 				if ( !m_wasClicked )
 				{
 					// player looses
-					m_winner = 1;
+					m_winner = 0; // TriRIK - nope, player always win
 					m_isGameEnded = true;
 				}
 				else
