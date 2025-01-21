@@ -4076,7 +4076,24 @@ mBoolean( true ) );
 			level = level + 1;
 			
 			talents = GetTalentPoints();
-			SetTalentPoints( talents + 1 );
+			SetTalentPoints( talents + 2 ); // TriRIK - 2 talent points
+			
+			// TriRIK - unlock training tree on level 2
+			if (level == 2)
+			{
+				GetCharacterStats().AddAbility('training_s1');
+				GetCharacterStats().AddAbility('training_s1_2');
+				GetCharacterStats().AddAbility('training_s2');
+				GetCharacterStats().AddAbility('training_s2_2');
+				GetCharacterStats().AddAbility('training_s3');
+				GetCharacterStats().AddAbility('training_s3_2');
+				GetCharacterStats().AddAbility('training_s4');
+				GetCharacterStats().AddAbility('training_s4_2');
+				GetCharacterStats().AddAbility('training_s5');
+				GetCharacterStats().AddAbility('training_s5_2');
+				GetCharacterStats().AddAbility('training_s6');
+				GetCharacterStats().AddAbility('training_s6_2');
+			}
 			
 			levelname = StringToName("Level" + level);
 			GetCharacterStats().AddAbility( levelname );
