@@ -701,12 +701,12 @@ exec function LootAll(  )
 
 	function AllowItemDarkDiff( sourceInv : CInventoryComponent, itemId : SItemUniqueId ) : bool
 	{
-	
-		if ( ( sourceInv.ItemHasTag(itemId, 'DarkDiffA1') || sourceInv.ItemHasTag(itemId, 'DarkDiffA2') || sourceInv.ItemHasTag(itemId, 'DarkDiffA3') || sourceInv.ItemHasTag(itemId, 'DarkDiff') ) && theGame.GetDifficultyLevel() < 4 )
+		return true; // TriRIK - Enable Dark Items for all difficulties
+		/*if ( ( sourceInv.ItemHasTag(itemId, 'DarkDiffA1') || sourceInv.ItemHasTag(itemId, 'DarkDiffA2') || sourceInv.ItemHasTag(itemId, 'DarkDiffA3') || sourceInv.ItemHasTag(itemId, 'DarkDiff') ) && theGame.GetDifficultyLevel() < 4 )
 		{
 			return false;
 		} else
 		{
 			return true;
-		}
+		}*/
 	}

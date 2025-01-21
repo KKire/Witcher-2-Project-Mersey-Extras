@@ -10,7 +10,8 @@
 
 function RemoveDarkDiffItemsIfNotDarkDiff( npc_newnpc : CNewNPC )
 {
-	if ( theGame.GetDifficultyLevel() != 4 )
+	// TriRIK - Enable Dark Items for all difficulties
+	/*if ( theGame.GetDifficultyLevel() != 4 )
 	{
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Schematic DarkDifficultyArmorA1' ), 10 );
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Schematic DarkDifficultyArmorA2' ), 10  );
@@ -48,12 +49,13 @@ function RemoveDarkDiffItemsIfNotDarkDiff( npc_newnpc : CNewNPC )
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Dark difficulty silversword A1' ), 10  );
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Dark difficulty silversword A2' ), 10  );
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Dark difficulty silversword A3' ), 10  );			
-	}
+	}*/
 }
 	
 function PlayerRemoveDarkDiffItemsIfNotDarkDiff()
 {
-	if ( theGame.GetDifficultyLevel() != 4 )
+	// TriRIK - Enable Dark Items for all difficulties
+	/*if ( theGame.GetDifficultyLevel() != 4 )
 	{
 		thePlayer.GetInventory().RemoveItem( thePlayer.GetInventory().GetItemId( 'Schematic DarkDifficultyArmorA1' ), 10 );
 		thePlayer.GetInventory().RemoveItem( thePlayer.GetInventory().GetItemId( 'Schematic DarkDifficultyArmorA2' ), 10  );
@@ -79,7 +81,7 @@ function PlayerRemoveDarkDiffItemsIfNotDarkDiff()
 		thePlayer.GetInventory().RemoveItem( thePlayer.GetInventory().GetItemId( 'DarkDifficultyPantsA1' ), 10  );
 		thePlayer.GetInventory().RemoveItem( thePlayer.GetInventory().GetItemId( 'DarkDifficultyPantsA2' ), 10  );
 		thePlayer.GetInventory().RemoveItem( thePlayer.GetInventory().GetItemId( 'DarkDifficultyPantsA3' ),10 );		
-	}
+	}*/
 }
 		
 

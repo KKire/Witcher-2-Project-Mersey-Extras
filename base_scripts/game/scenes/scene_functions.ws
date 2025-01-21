@@ -2875,11 +2875,12 @@ storyscene function AddDarkDifficultyModeItems( player : CStoryScenePlayer, npc:
 	var inventory : CInventoryComponent;
 	var playerInventory : CInventoryComponent; 
 
-inventory = npc_newnpc.GetInventory();
-playerInventory = thePlayer.GetInventory();
+	inventory = npc_newnpc.GetInventory();
+	playerInventory = thePlayer.GetInventory();
 	
-	if ( theGame.GetDifficultyLevel() == 4 )
-	{
+	// TriRIK - Enable Dark Items for all difficulties
+	//if ( theGame.GetDifficultyLevel() == 4 )
+	//{
 		
 		if ( theHud.m_mapCommon.GetMapId() == 1 )
 		{
@@ -2983,7 +2984,8 @@ playerInventory = thePlayer.GetInventory();
 			}			
 		}
 		return true;
-	}
+	// TriRIK - Enable Dark Items for all difficulties
+	/*}
 	else
 	{
 		//REMOVING SCHEMATICS FROM THE MERCHANTS
@@ -3006,7 +3008,7 @@ playerInventory = thePlayer.GetInventory();
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Schematic Dark difficulty silversword A2' ) );
 		npc_newnpc.GetInventory().RemoveItem( npc_newnpc.GetInventory().GetItemId( 'Schematic Dark difficulty silversword A3' ) );
 		return false;
-	}
+	}*/
 }
 
 storyscene function PlayAnimationEvent(player: CStoryScenePlayer, entityTag : name, eventName: name, forceEvent: bool ) : bool

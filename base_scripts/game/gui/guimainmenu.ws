@@ -9,7 +9,8 @@ exec function DiffChanged()
 	var inventory : CInventoryComponent;
 	theGame.SetDifficultyLevel(theHud.m_mainMenu.GetDiffValue());
 	theHud.m_mainMenu.Refill();
-	FactsAdd("diff_changed", 1);
+	// TriRIK - Enable Dark Items for all difficulties
+	/*FactsAdd("diff_changed", 1);
 	
 	inventory = thePlayer.GetInventory();
 	//schematy
@@ -67,7 +68,7 @@ exec function DiffChanged()
 	thePlayer.SetDarkWeaponSteel(false);
 	thePlayer.SetDarkEffect(false);
 	thePlayer.SetDarkSet(false);
-
+	*/
 }
 
 import struct SGuiGameSaveInfo
