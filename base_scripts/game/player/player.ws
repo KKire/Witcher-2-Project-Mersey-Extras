@@ -7914,6 +7914,11 @@ thePlayer.RemoveAllBuffs();
 		theHud.InvokeOneArg( "USMSubtitles2", USMTitle );
 	}
 
+	timer function GameSaveTimer( t : float ) // TriRIK. GameSaveCheck. Original Author: stellar7project
+	{
+		theHud.m_mainMenu.GameSaveCheck();
+	}
+
 ///////////////////////////////////////////////////////////////	
 }
 

@@ -733,6 +733,8 @@ import class CGame extends CObject
 			thePlayer.AddTimer( 'clearHudTextFieldTimer', 1.5f, false );
 			//theHud.m_hud.ShowTutorial("tut64", "", false);
 			//theHud.ShowTutorialPanelOld("tut64", "");
+
+			thePlayer.AddTimer( 'GameSaveTimer', 1.5f ); // TriRIK. GameSaveCheck. Original Author: stellar7project
 		} else
 		if ( resultCode == SAR_SaveLock )
 		{

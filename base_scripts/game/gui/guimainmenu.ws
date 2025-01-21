@@ -353,6 +353,8 @@ import class CGuiMainMenu extends CGuiPanel
 
 		super.OnOpenPanel();
 		
+		GameSaveCheck(1); // TriRIK. GameSaveCheck. Original Author: stellar7project
+
 		if ( inGame )
 		{
 			theGame.PauseCutscenes();
@@ -369,7 +371,59 @@ import class CGuiMainMenu extends CGuiPanel
 			
 		RefreshChaptersData();
 	}
-	
+
+	function GameSaveCheck( optional bAlwaysCheck : bool ) // TriRIK - Keep latest 5 Auto saves and delete the older ones. Original Author: stellar7project
+	{
+		var s1,s2,s3,s4,s5,sx : int;
+		RefreshSaveData();
+		if( bAlwaysCheck || StrFindFirst(saves[0].fileName, "Auto") != -1 )
+		{
+			for( s1=0; s1<saves.Size(); s1+=1 )
+			{
+				if( StrFindFirst(saves[s1].fileName, "Auto") != -1 )
+				{
+					break;
+				}
+			}
+			for( s2=s1+1; s2<saves.Size(); s2+=1 )
+			{
+				if( StrFindFirst(saves[s2].fileName, "Auto") != -1 )
+				{
+					break;
+				}
+			}
+			for( s3=s2+1; s3<saves.Size(); s3+=1 )
+			{
+				if( StrFindFirst(saves[s3].fileName, "Auto") != -1 )
+				{
+					break;
+				}
+			}
+			for( s4=s3+1; s4<saves.Size(); s4+=1 )
+			{
+				if( StrFindFirst(saves[s4].fileName, "Auto") != -1 )
+				{
+					break;
+				}
+			}
+			for( s5=s4+1; s5<saves.Size(); s5+=1 )
+			{
+				if( StrFindFirst(saves[s5].fileName, "Auto") != -1 )
+				{
+					break;
+				}
+			}
+
+			for( sx=s5+1; sx<saves.Size(); sx+=1 )
+			{
+				if( StrFindFirst(saves[sx].fileName, "Auto") != -1 )
+				{
+					DeleteGameSave(sx);
+				}
+			}
+		}
+	}
+
 	event OnClosePanel()
 	{
 		theHud.ForgetObject( AS_menuData );
