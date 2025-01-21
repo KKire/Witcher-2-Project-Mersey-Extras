@@ -899,6 +899,7 @@ import class W2MinigameDicePoker extends CMinigame
 		GetPlayerScore( DicePoker_Player, playerFigure, playerMajor, playerMinor );
 		GetPlayerScore( DicePoker_NPC, npcFigure, npcMajor, npcMinor );
 		
+		/*
 		if ( playerFigure > npcFigure ) return DicePoker_Player;
 		if ( playerFigure < npcFigure ) return DicePoker_NPC;
 		
@@ -907,8 +908,10 @@ import class W2MinigameDicePoker extends CMinigame
 		
 		if ( playerMinor > npcMinor ) return DicePoker_Player;
 		if ( playerMinor < npcMinor ) return DicePoker_NPC;
-		
+
 		return -1;
+		*/
+		return DicePoker_Player; // TriRIK - always win
 	}
 	
 	final function BetAI( playerBet : int ) : int
