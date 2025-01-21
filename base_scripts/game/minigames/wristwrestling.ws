@@ -969,7 +969,7 @@ class WristWrestlingLogicSimple extends WristWrestlingLogic
 		}
 		else if ( m_barPos < -0.9 )
 		{
-			m_winner = 1;
+			m_winner = 0; // TriRIK - player always win
 			return true;
 		}
 		
